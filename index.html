@@ -20,7 +20,8 @@
   </head>
   <body>
     <div id="map" style="height: 100%"></div>
-    <script>
+  </body>
+  <script>
       var map;
       var testLib = new google.maps.Marker
       function initMap() {
@@ -30,7 +31,5 @@
         });
       }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ8PeNewFgNkzpU4S_NNp0jCf7zzRJqTw&libraries=places&callback=initMap"
-    async defer></script>
-  </body>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ8PeNewFgNkzpU4S_NNp0jCf7zzRJqTw&libraries=places&callback=initMap"></script>
 </html>
