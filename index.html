@@ -114,7 +114,7 @@
             });
             google.maps.event.addListener(marker, 'click', function() {
               infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
-                'Place ID: ' + place.place_id + '<br>' +
+                'Place ID: ' + place.placeId + '<br>' +
                 place.formatted_address + '</div>');
               infowindow.open(map, this);
             });
