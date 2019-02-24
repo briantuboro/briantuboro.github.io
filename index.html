@@ -59,6 +59,7 @@
   </body>
   <script>
       var map;
+      var requestPlaceId;
       function initMap() {
         var cebu = {lat: 10.315056, lng: 123.900846};
         map = new google.maps.Map(document.getElementById('map'), {
@@ -97,6 +98,11 @@
             pagination.nextPage();
           };
         });
+
+        var request = {
+          placeId: requestPlaceId,
+          fields: ['name', 'formatted_address', 'place_id', 'geometry']
+        };
       }
 
       function createMarkers(places) {
@@ -122,6 +128,8 @@
           var li = document.createElement('li');
           li.textContent = "place.name";
           placesList.appendChild(li);
+
+          requestPlaceId = place.placeId
 
           bounds.extend(place.geometry.location);
         }
