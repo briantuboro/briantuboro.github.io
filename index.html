@@ -114,7 +114,7 @@
             });
             google.maps.event.addListener(marker, 'click', function() {
               infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
-                'Place ID: ' + place.placeId + '<br>' +
+                'Place ID: ' + place.place_id + '<br>' +
                 place.formatted_address + '</div>');
               infowindow.open(map, this);
             });
@@ -146,7 +146,7 @@
           li.textContent = "place.name";
           placesList.appendChild(li);
 
-          requestPlaceId = place.placeId
+          requestPlaceId = place.place_id;
 
           bounds.extend(place.geometry.location);
         }
